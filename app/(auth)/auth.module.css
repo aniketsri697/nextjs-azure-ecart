@@ -1,0 +1,35 @@
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-wrapper {
+    border: 1px solid black;
+    border-radius: 20px;
+    min-height: 20rem;
+    min-width: 20rem;
+    background-color: var(--background);
+    padding: 10px;
+}
+.auth-form-wrapper {
+    
+}
+.submit-button {
+    margin: 10px;
+    background-color: var(--background);
+    border-radius: 20px;
+    border: 1px dashed blue;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 5px 	#c5c5c5
+}
+
+.form-wrapper input {
+    outline: none;
+}
