@@ -23,8 +23,18 @@ export async function POST() {
     sharedKeyCredential
   ).toString();
 
+  const readSas = generateBlobSASQueryParameters(
+    {
+      containerName,
+      blobName,
+      permissions: BlobSASPermissions.parse("r"),
+      expiresOn: new Date(Date.now() + 60 * 60 * 1000), // 1 hour
+    },
+    sharedKeyCredential
+  ).toString();
+
   const uploadUrl = `https://${accountName}.blob.core.windows.net/${containerName}/${blobName}?${sasToken}`;
-  const publicUrl = `https://${accountName}.blob.core.windows.net/${containerName}/${blobName}`;
+  const publicUrl = `https://${accountName}.blob.core.windows.net/${containerName}/${blobName}?${readSas}`;
 
   return NextResponse.json({ uploadUrl, publicUrl });
 }
