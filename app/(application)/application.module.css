@@ -1,0 +1,30 @@
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-box {
+    min-height: 50rem;
+    min-width: 100rem;
+    border: 1px solid;
+}
+
+.user-profile-pic-box {
+    width: 10rem;
+    height: 10rem;
+    border: 10px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-pic-box > input[type=file] {
+    
+}
+
+.user-profile-pic-box > input[type=file]::after {
+    content: "✏️";
+}

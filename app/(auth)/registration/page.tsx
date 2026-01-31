@@ -1,20 +1,29 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import useFetchHeler from "@/app/utility/custom-components/fetchHelper";
+import useFetchHelper from "@/lib/utility/custom-components/fetchHelper";
 import style from "../auth.module.css";
-
+import { useRouter } from "next/navigation";
 
 function Registration() {
 
-    const { isPending, fetchUrl } = useFetchHeler();
+    const { isPending, fetchUrl, responeData, error } = useFetchHelper();
     const [formPayload, setFormPyload]= useState({
         fullName: '',
         gender: '',
         password: '',
         confirmPassword: '',
         email: ''
-    })
+    });
+    const router= useRouter();
+
+    useEffect(() => {
+        
+        if (responeData) {
+            console.log("response ",responeData);
+            router.push('/profile-setting')
+        }
+    },[responeData]);
 
     const formInputTextHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         setFormPyload(payload => {
