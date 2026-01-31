@@ -18,7 +18,6 @@ function Registration() {
     const router= useRouter();
 
     useEffect(() => {
-        
         if (responeData) {
             console.log("response ",responeData);
             router.push('/profile-setting')

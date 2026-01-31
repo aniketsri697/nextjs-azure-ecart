@@ -10,7 +10,7 @@ function ProfilesSetting() {
         const file = e.currentTarget.files?.[0];
         if (!file) return;
         console.log("selected file:", file);
-        const res = await fetch("/api/application/upload-file", { method: "POST" });
+        const res = await fetch("/api/application/uploadfile", { method: "POST" });
         const { uploadUrl, publicUrl } = await res.json();
 
         // 2️⃣ Upload file directly to Azure

@@ -15,7 +15,7 @@ function useFetchHelper() {
                 return;
             case 'POST':
                 fetch(url, { ...getHeader(), body: JSON.stringify(payload)})
-                    .then((res) => res.json)
+                    .then((res) => res.json())
                     .then((res) => {
                         setResponseData(res)
                         setIsPending(false);
