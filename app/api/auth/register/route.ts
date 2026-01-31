@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true });
   } catch (err: any) {
-    console.error(err);
+    console.error("ERROR OCCURED::: ",err);
     return NextResponse.json(
       { error: "Server error" },
       { status: 500 }
