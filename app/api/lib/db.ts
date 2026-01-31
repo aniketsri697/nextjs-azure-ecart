@@ -1,10 +1,10 @@
 import sql from "mssql";
 
 const config: sql.config = {
-  server: "sql-server-app-dev-2.privatelink.database.windows.net",
-  database: "sql-db-app-dev",
-  user: "sql-server-admin-dev",
-  password: "xyzAb@54321",
+  server: process.env.AZURE_STORAGE_ACCOUNT!,
+  database: process.env.AZURE_STORAGE_ACCOUNT!,
+  user: process.env.AZURE_STORAGE_ACCOUNT!,
+  password: process.env.AZURE_STORAGE_ACCOUNT!,
   options: {
     encrypt: true,
     trustServerCertificate: true,
