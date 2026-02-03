@@ -54,7 +54,7 @@ function ProfilesSetting() {
                 <div className={style["user-profile-pic-box"]}>
                     {
                         publicUrl ?
-                            <img src={publicUrl} alt="Img" />
+                            <img src={publicUrl} alt="Img url" />
                         :
                         <>
                             <input type="file" style={{ display: "none" }}  ref={fileEleRef} onChange={ImageFileHandler}/>
