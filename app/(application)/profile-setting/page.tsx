@@ -35,7 +35,7 @@ function ProfilesSetting() {
         fetch("https://fa-notification-app-dev-abfzaufqbdcbfzfd.centralindia-01.azurewebsites.net/api/OrderProcessTrigger",  {
             method: "POST",
             body: JSON.stringify({
-                "name":"Alice","email":"alice@example.com"
+                "name":"Aniket","email":"aniket697@gmail.com"
             })
         }).then((res) => res.json)
         .then((res) => {
