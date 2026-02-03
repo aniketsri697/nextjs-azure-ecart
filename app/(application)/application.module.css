@@ -9,6 +9,9 @@
     min-height: 50rem;
     min-width: 100rem;
     border: 1px solid;
+        display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-profile-pic-box {
